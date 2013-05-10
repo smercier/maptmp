@@ -18,8 +18,10 @@ function init(){
     map = new OpenLayers.Map( 'map', {
         displayProjection: new OpenLayers.Projection("EPSG:4326")
     } );
+    
+   map.setCenter(new OpenLayers.LonLat(-71.8754,47.0546),10);
 
-    var brasdunord_layer = new OpenLayers.Layer.TMS( "bras du nord",
+ var brasdunord_layer = new OpenLayers.Layer.TMS( "bras du nord",
         "http://cartalib.mapgears.com/mapcache/tms/",
         { layername: 'brasdunord@g', type: "png", serviceVersion:"1.0.0",
           gutter:0,buffer:0,isBaseLayer:true,transitionEffect:'resize',
