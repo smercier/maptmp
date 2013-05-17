@@ -17,7 +17,7 @@ function init(){
         displayProjection: new OpenLayers.Projection("EPSG:4326")
     } );
 
-    var planet_osm_g_tms_layer = new OpenLayers.Layer.TMS( "Carte de Base du Canada – Transport (CBCT)",
+    var cbct_g_tms_layer = new OpenLayers.Layer.TMS( "Carte de Base du Canada – Transport (CBCT)",
         "http://cartalib.mapgears.com/mapcache/tms/",
         { layername: 'cbct@g', type: "png", serviceVersion:"1.0.0",
           gutter:0,buffer:0,isBaseLayer:true,transitionEffect:'resize',
@@ -30,7 +30,7 @@ function init(){
           sphericalMercator: true
         }
     );
-    map.addLayer(planet_osm_g_tms_layer);
+    map.addLayer(cbct_g_tms_layer);
 
 
     if(!map.getCenter())
