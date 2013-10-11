@@ -17,7 +17,7 @@ function init(){
         displayProjection: new OpenLayers.Projection("EPSG:4326")
     } );
     
- 
+  map.setCenter(new OpenLayers.LonLat(30,41),3);
 
     var yulair = new OpenLayers.Layer.TMS( "yulair",
         "http://cartalibv2.mapgears.com/mapcache/tms/",
