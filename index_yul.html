@@ -16,8 +16,7 @@ function init(){
     map = new OpenLayers.Map( 'map', {
         displayProjection: new OpenLayers.Projection("EPSG:4326")
     } );
-    
-  map.setCenter(new OpenLayers.LonLat(30,41),3);
+
 
     var yulair = new OpenLayers.Layer.TMS( "yulair",
         "http://cartalibv2.mapgears.com/mapcache/tms/",
@@ -35,6 +34,9 @@ function init(){
     map.addLayer(yulair);
     if(!map.getCenter())
         map.zoomToMaxExtent();
+  
+     map.setCenter(new OpenLayers.LonLat(30.0,41.0),3);
+  
 }
     </script>
   </head>
