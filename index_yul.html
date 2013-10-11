@@ -33,7 +33,8 @@ function init(){
         }
     );
     map.addLayer(yulair);
-
+    if(!map.getCenter())
+        map.zoomToMaxExtent();
 }
     </script>
   </head>
