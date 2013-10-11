@@ -34,7 +34,7 @@ function init(){
     map.addLayer(yulair);
     if(!map.getCenter())
         map.zoomToMaxExtent();
-  
+  map.addControl(new OpenLayers.Control.MousePosition());
      map.setCenter(new OpenLayers.LonLat(30.0,41.0),3);
   
 }
