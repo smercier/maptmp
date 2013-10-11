@@ -19,7 +19,7 @@ function init(){
     
    map.setCenter(new OpenLayers.LonLat(-71.8754,47.0546),3);
 
- var layer = new OpenLayers.Layer.TMS( "yulair",
+    var yulair = new OpenLayers.Layer.TMS( "yulair",
         "http://cartalibv2.mapgears.com/mapcache/tms/",
         { layername: 'yulair@g', type: "png", serviceVersion:"1.0.0",
           gutter:0,buffer:0,isBaseLayer:true,transitionEffect:'resize',
@@ -32,7 +32,7 @@ function init(){
           sphericalMercator: true
         }
     );
-    map.addLayer(layer)
+    map.addLayer(yulair);
 
  
 
