@@ -17,9 +17,9 @@ function init(){
         displayProjection: new OpenLayers.Projection("EPSG:4326")
     } );
     
-   map.setCenter(new OpenLayers.LonLat(-71.8754,47.0546),2);
+   map.setCenter(new OpenLayers.LonLat(-71.8754,47.0546),3);
 
- var brasdunord_layer = new OpenLayers.Layer.TMS( "bras du nord",
+ var layer = new OpenLayers.Layer.TMS( "yulair",
         "http://cartalibv2.mapgears.com/mapcache/tms/",
         { layername: 'yulair@g', type: "png", serviceVersion:"1.0.0",
           gutter:0,buffer:0,isBaseLayer:true,transitionEffect:'resize',
@@ -32,7 +32,7 @@ function init(){
           sphericalMercator: true
         }
     );
-    map.addLayer(brasdunord_layer)
+    map.addLayer(layer)
 
  
 
