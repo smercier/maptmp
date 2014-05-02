@@ -20,7 +20,7 @@ function init(){
    map.setCenter(new OpenLayers.LonLat(-71.8754,47.0546),10);
 
 
-    var ne_mgsol_gg_tms_layer = new OpenLayers.Layer.TMS( "ne_mgsol-gg-TMS",
+var ne_mgsol_gg_tms_layer = new OpenLayers.Layer.TMS( "ne_mgsol-gg-TMS",
         "http://dev5.mapgears.com/mapcache/tms/",
         { layername: 'ne_mgsol@gg', type: "png", serviceVersion:"1.0.0",
           gutter:0,buffer:0,isBaseLayer:true,transitionEffect:'resize',
@@ -33,7 +33,8 @@ function init(){
           sphericalMercator: true
         }
     );
-    map.addLayer(ne_mgsol_gg_tms_layer)
+    
+    map.addLayer(ne_mgsol_gg_tms_layer);
 
 
     if(!map.getCenter())
